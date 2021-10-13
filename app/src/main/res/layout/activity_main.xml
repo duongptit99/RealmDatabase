@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/edt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_id" />
+
+    <EditText
+        android:id="@+id/edt_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="gioi tinh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_name" />
+
+    <EditText
+        android:id="@+id/edt_iclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="lop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_sex" />
+
+    <EditText
+        android:id="@+id/edt_pointmath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="diem toan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_iclass" />
+
+    <EditText
+        android:id="@+id/edt_pointchemistry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="diem hoa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_pointmath" />
+
+    <EditText
+        android:id="@+id/edt_pointphysic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="diem ly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_pointchemistry" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Them"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_pointphysic" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_add"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
